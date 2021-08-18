@@ -10,8 +10,11 @@
       //"rich-text",
       // "info-card",
       // "info-card#button-left"
-      "flex-layout.row#main",
-      "slider-layout#home",
+      // "flex-layout.row#main", // Aqui é o PRODUTO 1
+      //"slider-layout#home",
+      // "slider-layout#produto1",
+      // "stack-layout",
+      "slider-layout#homePage",
       "rich-text"
     ]
   },

@@ -45,5 +45,37 @@
         "props": {
             "src": "https://appliancetheme.vteximg.com.br/arquivos/flatflat-brand-logo-square6.png"
         }
+    },
+    "slider-layout#produto1": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "infinite": true,
+            "showNavigationArrows": "desktopOnly",
+            "blockClass": "carousel"
+        },
+        "children": [
+            "image#produto1a",
+            "image#produto1b",
+            "image#produto1c"
+        ]
+    },
+    "image#produto1a": {
+        "props": {
+            "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1627336500-01.png"
+        }
+    },
+    "image#produto1b": {
+        "props": {
+            "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1627336506-02.png"
+        }
+    },
+    "image#produto1c": {
+        "props": {
+            "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1627336512-03.png    "
+        }
     }
 }

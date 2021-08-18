@@ -26,7 +26,7 @@
   },
   "flex-layout.row#desktop": {
     "props": {
-      "horizontalAlign": "center",
+      // "horizontalalign": "center",
       "verticalAlign": "center",
       "preventHorizontalStretch": true,
       "preventVerticalStretch": true,
@@ -94,7 +94,7 @@
     "props": {
       "showAllDepartments": true,
       "showSubcategories": true,
-      "menuDisposition": "center",
+      // "menuDisposition": "center",   Deu ERRO no Console
       "departments": [],
       "sortSubcategories": "name"
     }
@@ -105,8 +105,8 @@
         {
           "id": "menu-item-feminino",
           "type": "custom",
-          //"horizontalAlign": "center",
-          "menuDisposition": "left",
+          //"horizontalalign": "center",
+          // "menuDisposition": "left",   Deu ERRO no Console
           "iconId": null,
           "highlight": false,
           "itemProps": {
@@ -121,7 +121,7 @@
           "id": "menu-item-masculino",
           "type": "custom",
           "iconId": null,
-          // "horizontalAlign": "center",
+          "horizontalalign": "center",
           "highlight": false,
           "itemProps": {
             "type": "internal",
@@ -135,7 +135,7 @@
           "id": "menu-item-infantil",
           "type": "custom",
           "iconId": null,
-          // "horizontalAlign": "center",
+          //"horizontalalign": "center",
           "highlight": false,
           "itemProps": {
             "type": "internal",
@@ -149,7 +149,7 @@
           "id": "menu-item-casa",
           "type": "custom",
           "iconId": null,
-          // "horizontalAlign": "center",
+          //"horizontalalign": "center",
           "highlight": false,
           "itemProps": {
             "type": "internal",

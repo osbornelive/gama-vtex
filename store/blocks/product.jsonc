@@ -2,7 +2,8 @@
 {
   "store.product": {
     "children": [
-      "flex-layout.row#main"
+      "breadcrumb"
+      // "flex-layout.row#main"
     ]
   },
   "flex-layout.row#main": {
@@ -26,16 +27,37 @@
       "verticalAlign": "middle"
     },
     "children": [
-      "product-name",
+      // "product-name",
+      //"product-identifier.product",
       "product-price",
+      //"flex-layout.row#qty-sku",
+      //"shipping-simulator",
       "buy-button"
     ]
+  },
+  "product-name": {
+    "props": {
+      "showSku": true,
+      "showBrandName": true
+    }
   },
   "product-price": {
     "props": {
       "showSavings": true,
       "showListPrice": true
     }
+  },
+  "buy-button#product": {
+    "props": {
+      "isOneClickBuy": true,
+      "showTooltipOnSkuNotSelected": false
+    }
+  },
+  "flex-layout.row#qty-sku": {
+    "children": [
+      "sku-selector",
+      "product-quantity"
+    ]
   },
   "image#produto1": {
     "props": {
@@ -44,8 +66,40 @@
       "isFullModeStyle": true
     }
   },
+  "slider-layout#homePage": { // Aqui é o SLIDER que fica na Pagina INicial
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    },
+    "children": [
+      "image#homePage1",
+      "image#homePage2",
+      "image#homePage3"
+    ]
+  },
+  "image#homePage1": {
+    "props": {
+      "src": "https://i.ibb.co/qmYvWmP/5ae95fc0286b.png"
+    }
+  },
+  "image#homePage2": {
+    "props": {
+      "src": "https://i.ibb.co/NmWzD5X/7cddccdb77c5.png"
+    }
+  },
+  "image#homePage3": {
+    "props": {
+      "src": "https://i.ibb.co/JjZ39JJ/379a8fcb0cfe.png"
+    }
+  },
   // ******************************************** FIM *********************************************
-  //
+  //  
   // *********************************************************************************************
   "rich-text#1": {
     "props": {
