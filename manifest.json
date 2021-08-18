@@ -1,6 +1,6 @@
 {
-  "vendor": "vtex",
-  "name": "minimumtheme",
+  "vendor": "hiringcoders2021",
+  "name": "vtexa320",
   "version": "0.1.1",
   "builders": {
     "styles": "2.x",
@@ -44,7 +44,13 @@
     "vtex.iframe": "0.x",
     "vtex.breadcrumb": "1.x",
     "vtex.sticky-layout": "0.x",
-    "vtex.add-to-cart-button": "0.x"
+    "vtex.add-to-cart-button": "0.x",
+    "vtex.condition-layout": "1.x",
+    "vtex.store-link": "0.x",
+    "vtex.modal-layout": "0.x",
+    "vtex.product-price": "1.x",
+    "vtex.category-menu": "2.x",
+    "vtex.store-form": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
