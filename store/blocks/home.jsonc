@@ -4,48 +4,9 @@
       "flex-layout.row#menu",
       "flex-layout.row#bannerAfterHeader",
       "flex-layout.row#bannerPrincipal",
-      // "flex-layout.row",
-      // "category-menu"
-      // "image#destaqueHome"
-      //"rich-text",
-      // "info-card",
-      // "info-card#button-left"
-      // "flex-layout.row#main", // Aqui é o PRODUTO 1
-      //"slider-layout#home",
-      // "slider-layout#produto1",
-      // "stack-layout",
       "slider-layout#homePage",
+      "list-context.image-list#demo",
       "rich-text"
-    ]
-  },
-  "image#afterHeader": { // Nao sei usar com a Imagem, tive que usar com o info-card#afterheader ='(
-    "props": {
-      "src": "https://i.ibb.co/QQFcnX8/2946afda4acbc-afterheader-forever-v2.gif",
-      //"imageUrl": "https://i.ibb.co/QQFcnX8/2946afda4acbc-afterheader-forever-v2.gif",
-      "isFullModeStyle": true,
-      "maxWidth": "100%",
-      "maxHeight": 70
-    }
-  },
-  "image#destaqueHome": {
-    "props": {
-      "src": "https://i.ibb.co/2FDcKSK/destaque-home.png",
-      "isFullModeStyle": true
-    }
-  },
-  "info-card#afterheader": { // è Aquele que fica com o Botao do lado. Ruim
-    "props": {
-      "src": "https://i.ibb.co/QQFcnX8/2946afda4acbc-afterheader-forever-v2.gif",
-      //"imageUrl": "https://i.ibb.co/QQFcnX8/2946afda4acbc-afterheader-forever-v2.gif",
-      //  "imageUrl": "https://i.ibb.co/2FDcKSK/destaque-home.png",
-      "isFullModeStyle": false,
-      "maxWidth": "100%"
-    }
-  },
-  "flex-layout.row": {
-    "children": [
-      "info-card#rethink", // Area do lado Esquerdo
-      "flex-layout.col" // Area do lado Direito
     ]
   },
   "flex-layout.row#menu": {
@@ -90,72 +51,58 @@
       "image#destaqueHome"
     ]
   },
+  "image#afterHeader": {
+    "props": {
+      "src": "https://i.ibb.co/QQFcnX8/2946afda4acbc-afterheader-forever-v2.gif"
+    }
+  },
+  "image#destaqueHome": {
+    "props": {
+      "src": "https://i.ibb.co/2FDcKSK/destaque-home.png"
+    }
+  },
   // *******
-  // *******
-  "flex-layout.col": {
+  "list-context.image-list#demo": {
     "children": [
-      "image#electronics",
-      "image#major-appliance"
-    ]
-  },
-  "flex-layout.col#banner": {
-    "children": []
-  },
-  "info-card#rethink": {
+      "slider-layout#demo-images"
+    ],
     "props": {
-      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/utensilios-cozinha-min.png",
-      "isFullModeStyle": true,
-      "headline": "Time to rethink your kitchen",
-      "callToActionText": "Discover",
-      "textPosition": "center"
+      "autoplay": true,
+      "autoplaySpeed": 4,
+      "banners": [],
+      "showArrows": true,
+      "showDots": true,
+      "height": 440, // Altura
+      "width": 50,
+      "marginTop": 5,
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": false,
+      "images": [
+        {
+          "image": "https://i.ibb.co/2FDcKSK/destaque-home.png",
+          "description": "something something"
+        },
+        {
+          "image": "https://storecomponents.vteximg.com.br/assets/vtex.file-manager-graphql/images/Group%207%20(1)%20(1)%20(1)%20(1)%20(1)___c6b3ed853fb16a08b265753b50e0c57a.png",
+          "description": "something something"
+        }
+      ]
     }
   },
-  "image#electronics": {
+  "slider-layout#demo-images": {
     "props": {
-      "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/electronics_banner___25d69b49f8224b369375e68513b4d593.png",
-      "maxWidth": "50%"
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true
     }
   },
-  "image#major-appliance": {
-    "props": {
-      "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/major_appliance_banner___bb10093866a127345ddfbcca3efa5022.png",
-      "maxWidth": "100%"
-    }
-  },
-  "info-card": {
-    "props": {
-      // "id": "info-card-example",
-      /*       "isFullModeStyle": false,
-      "textPosition": "left", */
-      //"imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      //"headline": "Clearance Sale",
-      //  "textAlignment": "center"
-    }
-  },
-  "info-card#button-left": {
-    "props": {
-      "isFullModeStyle": false,
-      "textPosition": "left",
-      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
-      "headline": "Shining chrome",
-      "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.",
-      "callToActionMode": "link",
-      "callToActionText": "Go to collection",
-      "textAlignment": "center"
-    }
-  },
-  "info-card#button-right": {
-    "props": {
-      "isFullModeStyle": false,
-      "textPosition": "right",
-      "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
-      "headline": "Shining chrome right",
-      "subhead": "Give your kitchen a cool style adding warm metallic finishes.<br>Available until January 2020.",
-      "callToActionMode": "link",
-      "callToActionText": "Go to collection",
-      "textAlignment": "center"
-    }
-  },
+  // *******
   "rich-text": {
     "props": {
       "text": ""

@@ -73,7 +73,14 @@
         "tablet": 1,
         "phone": 1
       },
+      "slideTransition": {
+        "speed": 3000,
+        "timing": "0",
+        "delay": 0
+      },
       "infinite": true,
+      "autoplay": false,
+      "delay": 3000,
       "showNavigationArrows": "desktopOnly",
       "blockClass": "carousel"
     },
