@@ -68,18 +68,11 @@
     ],
     "props": {
       "autoplay": true,
-      "autoplaySpeed": 4,
-      "banners": [],
-      "showArrows": true,
-      "showDots": true,
-      "height": 440, // Altura
-      "width": 50,
+      "arrowSize": 20,
       "marginTop": 5,
-      "horizontalAlign": "center",
-      "verticalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
-      "fullWidth": false,
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel",
       "images": [
         {
           "image": "https://i.ibb.co/2FDcKSK/destaque-home.png",

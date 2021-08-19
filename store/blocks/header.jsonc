@@ -158,6 +158,20 @@
             "tagTitle": "casa",
             "text": "Casa"
           }
+        },
+        {
+          "id": "menu-item-outlet",
+          "type": "custom",
+          "iconId": null,
+          //"horizontalalign": "center",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "/outlet",
+            "noFollow": false,
+            "tagTitle": "outlet",
+            "text": "Outlet"
+          }
         }
       ]
     }
