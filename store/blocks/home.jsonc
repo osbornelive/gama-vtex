@@ -34,6 +34,7 @@
     },
     "children": [
       // "vtex.menu@2.x:menu#websites"
+      "image#afterHeader", // Area do lado Esquerdo
       "image#afterHeader" // Area do lado Esquerdo
       // "flex-layout.col#banner" // Area do lado Direito
     ]
