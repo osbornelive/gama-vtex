@@ -2,7 +2,8 @@
 {
   "store.product": {
     "children": [
-      "breadcrumb"
+      // "breadcrumb",
+      "flex-layout.row#main"
       // "flex-layout.row#main"
     ]
   },
@@ -17,8 +18,8 @@
   },
   "flex-layout.col#left": {
     "children": [
-      //"product-images"
-      "image#produto1"
+      "product-images"
+      //"image#produto1"
     ]
   },
   "flex-layout.col#right": {
@@ -27,7 +28,7 @@
       "verticalAlign": "middle"
     },
     "children": [
-      // "product-name",
+      "product-name",
       //"product-identifier.product",
       "product-price",
       //"flex-layout.row#qty-sku",
@@ -66,21 +67,133 @@
       "isFullModeStyle": true
     }
   },
-  "slider-layout#homePage": { // Aqui é o SLIDER que fica na Pagina INicial
+  //
+  // ************ Banner Carrossel Pagina Inicial **********
+  "flex-layout.row#bannerCarrosselHome": {
+    "props": {
+      "marginTop": 5,
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "slider-layout#bannerCarrosselHome"
+    ]
+  },
+  "flex-layout.col#bannerCarrosselHome": {
+    "children": [
+      "slider-layout#bannerCarrosselHome"
+    ]
+  },
+  "slider-layout#bannerCarrosselHome": { // Aqui é o SLIDER
     "props": {
       "itemsPerPage": {
         "desktop": 1,
         "tablet": 1,
         "phone": 1
       },
-      "slideTransition": {
-        "speed": 3000,
-        "timing": "0",
-        "delay": 0
+      "infinite": true,
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    },
+    "children": [
+      "image#bannerCarrosselHome1",
+      "image#bannerCarrosselHome1"
+    ]
+  },
+  "image#bannerCarrosselHome1": {
+    "props": {
+      "src": "https://i.imgur.com/WKMJ1Pr.png"
+    }
+  },
+  "image#bannerCarrosselHome2": {
+    "props": {
+      "src": "https://i.imgur.com/hYKAf0j.png"
+    }
+  },
+  // *************************************************
+  //
+  // ************ Grid de Produtos Pagina Inicial **********
+  "flex-layout.row#gridProdutoHome": {
+    "props": {
+      "marginTop": 5,
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#gridProdutoHome",
+      "flex-layout.col#gridProdutoHome"
+    ]
+  },
+  "flex-layout.col#gridProdutoHome": {
+    "children": [
+      "slider-layout#gridProdutoHome"
+    ]
+  },
+  "slider-layout#gridProdutoHome": { // Aqui é o SLIDER
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
       },
       "infinite": true,
-      "autoplay": false,
-      "delay": 3000,
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    },
+    "children": [
+      "image#gridProdutoHomeP1",
+      "image#gridProdutoHomeP2"
+    ]
+  },
+  "image#gridProdutoHomeP1": {
+    "props": {
+      "src": "https://i.imgur.com/B5WCezh.png"
+    }
+  },
+  "image#gridProdutoHomeP2": {
+    "props": {
+      "src": "https://i.imgur.com/B5WCezh.png"
+    }
+  },
+  // *************************************************
+  "flex-layout.row#p1": {
+    "children": [
+      "slider-layout#homeProduto1",
+      "slider-layout#homeProduto1",
+      "slider-layout#homeProduto1"
+    ]
+  },
+  "flex-layout.col#p1": {
+    "children": [
+      "image#produto1"
+    ]
+  },
+  "slider-layout#homeProduto1": { // Aqui é o SLIDER que fica na Pagina INicial
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
       "showNavigationArrows": "desktopOnly",
       "blockClass": "carousel"
     },
@@ -105,6 +218,40 @@
       "src": "https://i.ibb.co/JjZ39JJ/379a8fcb0cfe.png"
     }
   },
+  // #################################################
+  // ***************************** P R O D U T O *****
+  /* "flex-layout.row#paginaProduto": {
+    "props": {
+      "marginTop": 6
+    },
+    "children": [
+      "flex-layout.col#paginaProdutoLeft",
+      "flex-layout.col#paginaProdutoRight"
+    ]
+  },
+  "flex-layout.col#left": {
+    "children": [
+      "product-images"
+    ]
+  },
+  "flex-layout.col#right": {
+    "props": {
+      "preventVerticalStretch": true,
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "product-name",
+      "product-price",
+      "buy-button"
+    ]
+  },
+  "product-price": {
+    "props": {
+      "showSavings": true,
+      "showListPrice": true
+    }
+  } */
+  // ***************************** FIM DO PRODUTO *****
   // ******************************************** FIM *********************************************
   //  
   // *********************************************************************************************

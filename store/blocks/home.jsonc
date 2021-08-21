@@ -3,9 +3,17 @@
     "blocks": [
       "flex-layout.row#menu",
       "flex-layout.row#bannerAfterHeader",
-      "flex-layout.row#bannerPrincipal",
-      "slider-layout#homePage",
-      "list-context.image-list#demo",
+      "flex-layout.row#bannerCarrosselHome",
+      //"flex-layout.row#gridProdutoHome",
+      //"flex-layout.row#paginaProduto",
+      "flex-layout.row#main",
+      "tab-layout#categoriaHome",
+      //"slider-layout#homeProduto1",
+      //"tab-layout#home,
+      //"flex-layout.row#p1",
+      /*       "flex-layout.row#bannerPrincipal",
+     
+      "list-context.image-list#demo", */
       "rich-text"
     ]
   },
@@ -34,7 +42,6 @@
     },
     "children": [
       // "vtex.menu@2.x:menu#websites"
-      "image#afterHeader", // Area do lado Esquerdo
       "image#afterHeader" // Area do lado Esquerdo
       // "flex-layout.col#banner" // Area do lado Direito
     ]
@@ -96,7 +103,113 @@
       "infinite": true
     }
   },
-  // *******
+  //
+  //
+  // ***************************** C A T E G O R I A ***************
+  // Aqqui é pra fazer a Categoria
+  // Categoria de Feminino, Masculino  etc.
+  "tab-layout#categoriaHome": {
+    "children": [
+      "tab-list#home",
+      "tab-content#home"
+    ],
+    "props": {
+      "blockClass": "home",
+      "defaultActiveTabId": "calcado"
+    }
+  },
+  "tab-list#home": {
+    "children": [
+      "tab-list.item#calcado",
+      "tab-list.item#roupa",
+      "tab-list.item#acessorio",
+      "tab-list.item#esporte",
+      "tab-list.item#beleza"
+    ]
+  },
+  "tab-list.item#calcado": {
+    "props": {
+      "tabId": "calcado",
+      "label": "CALÇADOS",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#roupa": {
+    "props": {
+      "tabId": "roupa",
+      "label": "ROUPAS"
+    }
+  },
+  "tab-list.item#acessorio": {
+    "props": {
+      "tabId": "acessorio",
+      "label": "acessorio"
+    }
+  },
+  "tab-list.item#esporte": {
+    "props": {
+      "tabId": "esporte",
+      "label": "esporte"
+    }
+  },
+  "tab-list.item#beleza": {
+    "props": {
+      "tabId": "beleza",
+      "label": "BELEZA"
+    }
+  },
+  "tab-content#home": {
+    "children": [
+      "tab-content.item#calcado",
+      "tab-content.item#roupa",
+      "tab-content.item#acessorio",
+      "tab-content.item#esporte",
+      "tab-content.item#beleza"
+    ]
+  },
+  "tab-content.item#calcado": {
+    "children": [
+      //"carousel#home"
+      "image#homePage1"
+    ],
+    "props": {
+      "tabId": "calcado"
+    }
+  },
+  "tab-content.item#roupa": {
+    "children": [
+      "image#homePage2"
+    ],
+    "props": {
+      "tabId": "roupa"
+    }
+  },
+  "tab-content.item#acessorio": {
+    "children": [
+      "image#homePage2"
+    ],
+    "props": {
+      "tabId": "acessorio"
+    }
+  },
+  "tab-content.item#esporte": {
+    "children": [
+      "image#homePage2"
+    ],
+    "props": {
+      "tabId": "esporte"
+    }
+  },
+  "tab-content.item#beleza": {
+    "children": [
+      "image#homePage2"
+    ],
+    "props": {
+      "tabId": "beleza"
+    }
+  },
+  //********************************************* FIM DA CATEGORIA ****************
+  // 
   "rich-text": {
     "props": {
       "text": ""
