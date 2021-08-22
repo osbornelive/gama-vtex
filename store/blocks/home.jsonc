@@ -1,12 +1,22 @@
+// Tem que colocar TODAS as funcoes no padrao ..#nome-nome*
+// OU seja.. tem um TRACO no meio e NÃO ..#nomeNome .. ='(
 {
   "store.home": {
     "blocks": [
       "flex-layout.row#menu",
       "flex-layout.row#bannerAfterHeader",
-      "flex-layout.row#bannerCarrosselHome",
+      //"flex-layout.row#bannerCarrosselHome",
+      //"product-separator",
+      //"list-context.image-list#banner-principal",
+      "flex-layout.row#banner-principal",
+      "flex-layout.row#carrosellHomepromocao", // Categorias - Carrossel icones HomePage
+      "rich-text#tituloHomePromocao", // Produtos em Destaque
+      "flex-layout.row#shelf", // Lista de Produtos
       //"flex-layout.row#gridProdutoHome",
       //"flex-layout.row#paginaProduto",
-      "flex-layout.row#main",
+      //"flex-layout.row#main",
+      "__fold__.experimentalLazyAssets", // Aula Vtex
+      "rich-text#titulo-categoria",
       "tab-layout#categoriaHome",
       //"slider-layout#homeProduto1",
       //"tab-layout#home,
@@ -14,9 +24,100 @@
       /*       "flex-layout.row#bannerPrincipal",
      
       "list-context.image-list#demo", */
+      "rich-text#newsletter-pergunta",
+      "flex-layout.row#newsletter-form",
+      //"newsletter-form",
       "rich-text"
     ]
   },
+  "flex-layout.row#banner-principal": {
+    "props": {
+      "marginTop": 5
+    },
+    "children": [
+      "list-context.image-list#banner-principal"
+    ]
+  },
+  "list-context.image-list#banner-principal": {
+    "children": [
+      "slider-layout#banner-principal-imagens"
+    ],
+    "props": {
+      "preload": true, // É bom usar o PRELOAD ? 
+      // "height": 620,
+      "images": [
+        {
+          "image": "https://i.imgur.com/WKMJ1Pr.png",
+          "mobileImage": "https://i.imgur.com/nlKaCGa.png",
+          "description": "VTEX IMAGEM - 2021"
+        },
+        {
+          "image": "https://i.imgur.com/hYKAf0j.png",
+          "mobileImage": "https://i.imgur.com/wckwdv4.jpg"
+        },
+        {
+          "image": "https://i.imgur.com/EbYr1Qv.png",
+          "mobileImage": "https://i.imgur.com/UIR8p8C.jpg"
+        }
+      ]
+    }
+  },
+  "slider-layout#banner-principal-imagens": {
+    "props": {
+      /*       "marginTop": 7,
+      "horizontalAlign": "center",
+      "verticalAlign": "center",*/
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": false
+      },
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    }
+  },
+  // *******************************
+  //  LISTA DE PRODUTOS DA HOME
+  //
+  "flex-layout.row#shelf": {
+    "children": [
+      "list-context.product-list#demo1"
+    ]
+  },
+  "list-context.product-list#demo1": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#demo-products"
+    ],
+    "props": {
+      //"orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+  //
+  // *********************************************
+  //
   "flex-layout.row#menu": {
     "props": {
       "horizontalAlign": "center",
@@ -210,6 +311,52 @@
   },
   //********************************************* FIM DA CATEGORIA ****************
   // 
+  "flex-layout.row#newsletter-form": {
+    "props": {
+      "marginTop": 5,
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "newsletter-form"
+    ]
+  },
+  "newsletter-form": {
+    "children": [
+      "newsletter-input-name",
+      "newsletter-input-email",
+      "newsletter-submit"
+    ]
+  },
+  // ******************************************
+  // Deixar TOdos os TITULOS no Fim
+  "rich-text#newsletter-pergunta": {
+    "props": {
+      "text": "**Quer ficar sabendo das promoções ?.\nDeixe o seu melhor email!**",
+      "blockClass": "question"
+    }
+  },
+  "rich-text#newsletter-form": {
+    "props": {
+      "text": "## Quer ficar atualizado ?",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#tituloHomePromocao": {
+    "props": {
+      "text": "## Produtos em Promoção",
+      "blockClass": "shelfTitle"
+    }
+  },
+  "rich-text#titulo-categoria": {
+    "props": {
+      "text": "## Pesquise por Categoria",
+      "blockClass": "shelfTitle"
+    }
+  },
   "rich-text": {
     "props": {
       "text": ""

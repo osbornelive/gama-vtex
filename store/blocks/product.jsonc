@@ -2,18 +2,34 @@
 {
   "store.product": {
     "children": [
-      // "breadcrumb",
+      //"breadcrumb",
+      "flex-layout.row#breadcrumb",
+      // "flex-layout.row#description",
+      "product-description",
       "flex-layout.row#main"
       // "flex-layout.row#main"
     ]
   },
-  "flex-layout.row#main": {
+  "flex-layout.row#breadcrumb": {
     "props": {
-      "marginTop": 6
+      "marginTop": 4
     },
     "children": [
-      "flex-layout.col#left",
-      "flex-layout.col#right"
+      "breadcrumb"
+    ]
+  },
+  "flex-layout.row#main": {
+    "props": {
+      "colGap": 7,
+      "rowGap": 7,
+      "marginTop": 4,
+      "marginBottom": 7,
+      "paddingTop": 7,
+      "paddingBottom": 7
+    },
+    "children": [
+      "flex-layout.col#left", // Lado ESQUERDO com Imagem do PRODUTO
+      "flex-layout.col#right" // Lado DI REI TO com as coisas do PRODUTO
     ]
   },
   "flex-layout.col#left": {
@@ -25,22 +41,54 @@
   "flex-layout.col#right": {
     "props": {
       "preventVerticalStretch": true,
-      "verticalAlign": "middle"
+      //"verticalAlign": "middle",
+      "rowGap": 0
     },
     "children": [
-      "product-name",
+      //"product-name",
+      //"product-name",
+      "flex-layout.row#product-name",
       //"product-identifier.product",
       "product-price",
+      "product-separator",
+      "product-installments",
+      "product-separator",
+      "product-identifier.product",
+      "product-separator",
+      "product-quantity",
+      //"product-assembly-options", // Ir para o Checkout
+      // "product-gifts", // Ir para o Checkout
+      //"sku-selector",
       //"flex-layout.row#qty-sku",
       //"shipping-simulator",
       "buy-button"
     ]
   },
+  "flex-layout.row#buy-button": {
+    "props": {
+      "marginTop": 4,
+      "marginBottom": 7
+    },
+    "children": [
+      "add-to-cart-button"
+    ]
+  },
   "product-name": {
     "props": {
       "showSku": true,
-      "showBrandName": true
+      "showBrandName": true,
+      "marginBottom": 3
     }
+  },
+  "flex-layout.row#product-name": {
+    "props": {
+      "marginBottom": 3,
+      "showSku": true,
+      "showBrandName": true
+    },
+    "children": [
+      "vtex.store-components:product-name"
+    ]
   },
   "product-price": {
     "props": {
@@ -50,6 +98,8 @@
   },
   "buy-button#product": {
     "props": {
+      "marginTop": 4,
+      "marginBottom": 7,
       "isOneClickBuy": true,
       "showTooltipOnSkuNotSelected": false
     }
@@ -104,7 +154,7 @@
     },
     "children": [
       "image#bannerCarrosselHome1",
-      "image#bannerCarrosselHome1"
+      "image#bannerCarrosselHome2"
     ]
   },
   "image#bannerCarrosselHome1": {
